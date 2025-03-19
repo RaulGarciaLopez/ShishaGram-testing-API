@@ -2,7 +2,6 @@ package com.testing.shishagram.services.implementations;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,9 +50,7 @@ public class ImplEmpresaService implements IEmpresaService {
 
     @Override
     public List<Empresa> findAll() {
-        return daoEmpresa.findAll().stream()
-                .filter(e -> e instanceof Empresa)
-                .collect(Collectors.toList());
+        return daoEmpresa.findAll();
     }
 
 }

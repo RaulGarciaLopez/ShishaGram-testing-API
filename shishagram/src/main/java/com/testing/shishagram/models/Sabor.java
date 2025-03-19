@@ -30,5 +30,5 @@ public class Sabor {
     private float rating;
     @Enumerated(EnumType.STRING)
     private CategoriaSabor category;
-
+    private String image;
 }
